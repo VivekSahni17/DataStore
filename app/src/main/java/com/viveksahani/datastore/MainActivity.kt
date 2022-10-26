@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
+        model = UserDetailsModel(this)
 
         mBinding.saveData.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
